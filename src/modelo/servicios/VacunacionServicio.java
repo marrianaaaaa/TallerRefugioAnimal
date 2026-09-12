@@ -15,7 +15,8 @@ import modelo.Mascota;
  * @author franc
  */
 public class VacunacionServicio {
-
+    
+    
     /**
      * Registra la vacunación de una mascota.
      *
@@ -60,20 +61,19 @@ public class VacunacionServicio {
         //    - RETORNAR true (se vacunó correctamente)
         
         if (mascotas == null){
-            MascotaNoEncontradaException e
             System.out.println("Mascota no encontrada");
-           return false;
+            return false;
         } if (mascotas.isVacunada() == true){
               System.out.println("La mascota ya se encuentra vacunada");
               return false;
         } else {
            }if (mascotas.isVacunada() == false){
-              mascotas.isVacunada(true);
+              mascotas.setVacunada() = true;
               System.out.println("Se vacunó correctamente");
               return true;
            }  
-        }
     }
+  
 
     /**
      * Cuenta cuántas mascotas NO han sido vacunadas aún.
@@ -92,7 +92,7 @@ public class VacunacionServicio {
         int cantidad = 0;
         for (Mascota mascota : mascotas) {
             // Contar si existe Y NO está vacunada
-            if (mascota != null && !mascota.isVacunada()) {
+            if (mascota != null && mascota.isVacunada() == false) {
                 cantidad++;
             }
         }
