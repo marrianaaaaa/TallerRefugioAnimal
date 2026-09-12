@@ -58,7 +58,21 @@ public class VacunacionServicio {
         // 4. SINO:
         //    - mascota.setVacunada(true)
         //    - RETORNAR true (se vacunó correctamente)
-        return false;
+        
+        if (mascotas == null){
+            MascotaNoEncontradaException e
+            System.out.println("Mascota no encontrada");
+           return false;
+        } if (mascotas.isVacunada() == true){
+              System.out.println("La mascota ya se encuentra vacunada");
+              return false;
+        } else {
+           }if (mascotas.isVacunada() == false){
+              mascotas.isVacunada(true);
+              System.out.println("Se vacunó correctamente");
+              return true;
+           }  
+        }
     }
 
     /**
